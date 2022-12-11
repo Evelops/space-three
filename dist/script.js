@@ -2,11 +2,11 @@ function App() {
   const conf = {
     el: 'canvas',
     gravity: -0.2,
-    nx: 12, // 커튼 두께는 여기서 바꾸세요 베이비
+    nx: 12, 
     ny: 40,
     size: 1.8,
     stiffness: 5,
-    mouseRadius: 4, // 휘날림 정도 조정은 여기서 하세요 베이비
+    mouseRadius: 4, 
     mouseStrength: 0.6 };
 
   let renderer, scene, camera;
@@ -67,7 +67,7 @@ function App() {
 
         void main() {
           vUv = uv;
-          vColor = vec4(color, 0.35 + smoothstep(0.0, 0.5, uv.y) * 0.35); // 투명도는 여기서 바꾸세요 베이비
+          vColor = vec4(color, 0.35 + smoothstep(0.0, 0.5, uv.y) * 0.35); 
 
           vec3 pos = vec3(position.x * uCx, position.y * uCy, 0.0);
           vec2 sprev = vec2(prev.x * uCx, prev.y * uCy);
@@ -102,7 +102,7 @@ function App() {
     const ox = -dx * (conf.nx / 2 - 0.5),oy = verlet.height / 2 - dy / 2;
     // const cscale = chroma.scale([chroma.random(), chroma.random()]);
     // const cscale = chroma.scale([0x09256f, 0x6efec8]);
-    const cscale = chroma.scale([0x09256f,0x099999]); // 색 변경시 여기서 바꾸세요 연주학생.
+    const cscale = chroma.scale([0x09256f,0x099999]); 
     for (let i = 0; i < conf.nx; i++) {
       const points = [];
       const vpoints = [];

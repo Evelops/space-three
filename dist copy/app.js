@@ -52,27 +52,30 @@ selectDate.addEventListener("change", (e) => {
     .then((data) => {
       img.src = data.url;
       getText = data.explanation;
-      console.log(`나사 API에서 가져온 이미지- > ${data.url}`);
+      console.log(`나사 API에서 가져온 이미지 -> ${data.url}`);
     })
     .catch((error) => {
       console.log(`실패 ${error}`);
     });
 });
 
-// 날짜 변경시 실행하는 함수.
-function handler(e) {
-  let nDate = e.target.value;
-  console.log(nDate);
-  //   const nUrl = `https://api.nasa.gov/planetary/apod?date=${nDate}&api_key=6bsRgazqRdpkZKFOo1LmtFFND9QQFWZLxdc331y1`;
 
-  //   fetch(url)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //         nImg.src = data.url;
-  //         nTTS = data.explanation;
-  //       console.log(`나사 API에서 가져온 이미지- > ${data.url}`);
-  //     })
-  //     .catch((error) => {
-  //       console.log(`실패 ${error}`);
-  //     });
-}
+
+
+// // 날짜 변경시 실행하는 함수.
+// function handler(e) {
+//   let nDate = e.target.value;
+//   console.log(nDate);
+//   //   const nUrl = `https://api.nasa.gov/planetary/apod?date=${nDate}&api_key=6bsRgazqRdpkZKFOo1LmtFFND9QQFWZLxdc331y1`;
+
+//   //   fetch(url)
+//   //     .then((response) => response.json())
+//   //     .then((data) => {
+//   //         nImg.src = data.url;
+//   //         nTTS = data.explanation;
+//   //       console.log(`나사 API에서 가져온 이미지- > ${data.url}`);
+//   //     })
+//   //     .catch((error) => {
+//   //       console.log(`실패 ${error}`);
+//   //     });
+// }
